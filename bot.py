@@ -30,7 +30,7 @@ class Bot(Client):
             app = web.Application(client_max_size=30000000)
             runner = web.AppRunner(app)
             await runner.setup()
-            site = web.TCPSite(runner, "0.0.0.0", 8080)
+            site = web.TCPSite(runner, "0.0.0.0", 8000)
             await site.start()  # Ensure this line has await
 
         print(f"\033[1;96m @{me.username} Sᴛᴀʀᴛᴇᴅ......⚡️⚡️⚡️\033[0m")
